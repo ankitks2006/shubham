@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Singh - Portfolios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#articles">Articles</a>
+            <a href="#videos">Videos</a>
+            <a href="#photos">Photos</a>
+            <a href="#graphics">Graphics</a>
+            <img src="cancel.png" id="fas" onclick="closemenu()" >
+        </div>
+        <img src="menu.png" id="fas" onclick="openmenu()" >
+    </nav>
+
+    <section id="home">
+        <div class="slider-container">
+            <div class="slider">
+                <img src="photo1.webp" alt="Portfolio Image 1">
+                <img src="photo2.webp" alt="Portfolio Image 2">
+                <img src="photo3.webp" alt="Portfolio Image 3">
+                <img src="photo4.webp" alt="Portfolio Image 3">
+                <img src="photo5.png" alt="Portfolio Image 3">
+            </div>
+            <button class="prev">Previous</button>
+            <button class="next">Next</button>
+        </div>
+
+        <div class="intro">
+            <h1>Welcome</h1>
+            <p>Hi, my name is Shubham Singh. I'm a communications specialist with over 10 years of experience living in the Snohomish County area. I am a passionate and lifelong storyteller, no matter the medium. As a professional creative, I always aim to work with the client to create the best product to meet their needs.</p>
+            <img src="man.png">
+        </div>
+
+        <div class="video-showcase">
+            <video id="showcase-video" autoplay muted > 
+                <!-- <video id="showcase-video" autoplay="false"> -->
+                <source src="vedio1.mp4" type="video/mp4"> 
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section id="articles" class="hidden">
+        <h2>Articles</h2>
+        <div class="articles-grid">
+            <!-- Articles will be populated via JavaScript -->
+        </div>
+    </section>
+
+    <section id="videos" class="hidden">
+        <h2>Videos</h2>
+        <div class="videos-grid">
+            <!-- Videos will be populated via JavaScript -->
+        </div>
+    </section>
+
+    <section id="photos" class="hidden">
+        <h2>Photos</h2>
+        <div class="photos-grid">
+            <!-- Photos will be populated via JavaScript -->
+        </div>
+    </section>
+
+    <section id="graphics" class="hidden">
+        <h2>Graphics</h2>
+        <div class="graphics-grid">
+            <!-- Graphics will be populated via JavaScript -->
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <!-- Content will be inserted here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const navbar = document.querySelector('.navbar')
+
+    function openmenu(){
+    navbar.style.right="0" 
+   }
+   function closemenu(){
+    navbar.style.right="-400px"
+   }
+
+    </script>
+</body>
+</html>
